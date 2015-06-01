@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DSLData.h"
+#import "MCPercentageDoughnutView.h"
 
-@interface CurrentUsageTableViewController : UITableViewController
+@interface CurrentUsageTableViewController : UITableViewController <MCPercentageDoughnutViewDataSource>
+
+// IBOutlets
+@property (strong, nonatomic) IBOutlet UIView *circularPercentageView;
+@property (strong, nonatomic) IBOutlet UILabel *dslIdLabel;
+@property (strong, nonatomic) IBOutlet UILabel *availableBalanceLabel;
+@property (strong, nonatomic) IBOutlet UILabel *daysLeftLabel;
+
+// IBActions
+- (IBAction)refreshButtonPressed:(UIBarButtonItem *)sender;
+
+// Properties
+@property (strong, nonatomic) DSLData *dslData;
+@property (strong, nonatomic) MCPercentageDoughnutView *circularPercentage;
 
 @end

@@ -91,7 +91,7 @@
     if (self) {
         self.center_x       = CGRectGetMidX(frame);
         self.center_y       = CGRectGetMidY(frame);
-        
+                
         // adjusts the external radius so that the selected
         // slices still fit inside of the container view bound's
         self.externalRadius = [self calcRadiusFromFrame:frame];

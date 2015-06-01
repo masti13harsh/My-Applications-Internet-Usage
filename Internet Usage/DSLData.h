@@ -8,6 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DSLData : NSObject
+@interface DSLData : NSObject <NSURLConnectionDataDelegate>
+{
+    NSMutableData *_responseData;
+}
+
+// Internal Properties
+@property (strong, nonatomic) NSString *responseString;
+
+// Properties
+@property (strong, nonatomic) NSString *dslId;
+@property (nonatomic) float dataLimit;
+@property (nonatomic) float availableBalance;
+@property (nonatomic) int numberOfDays;
+@property (nonatomic) float averageBalance;
+@property (nonatomic) float percentageOfDataConsumed;
+@property (strong, nonatomic) NSString *nextBillingCycle;
+@property (strong, nonatomic) NSString *transactionStatusString;
+@property (nonatomic) int transactionStatus;
+
+// Methods
+- (void)refreshData;
 
 @end

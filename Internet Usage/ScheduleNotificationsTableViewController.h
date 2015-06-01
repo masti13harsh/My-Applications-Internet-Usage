@@ -10,4 +10,14 @@
 
 @interface ScheduleNotificationsTableViewController : UITableViewController
 
+// IBActions
+- (IBAction)notificationSwitchChanged:(UISwitch *)sender;
+- (IBAction)saveButtonPressed:(UIButton *)sender;
+
+// IBOutlets
+@property (strong, nonatomic) IBOutlet UISegmentedControl *dailyOrWeeklySegment;
+@property (strong, nonatomic) IBOutlet UIView *notificationView;
+@property (strong, nonatomic) IBOutlet UIDatePicker *timePicker;
+@property (strong, nonatomic) IBOutlet UISwitch *notificationSwitch;
+
 @end

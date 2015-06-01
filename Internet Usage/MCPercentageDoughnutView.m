@@ -199,6 +199,8 @@ didReleaseMainPathOnLayer:(MCNewCustomLayer *)layer
     self.centerView.bounds          = CGRectMake(0, 0, centerViewSideSize, centerViewSideSize);
     self.centerView.center          = [MCUtil getCenterOfRect:self.bounds];
     
+    //NSLog(@"self.centerView.center--> %f", self.centerView.center.x);
+    
     if (self.adjustsFontSizeAutomatically)
     {
         self.textLabel.font = [self.textLabel.font fontWithSize:self.centerView.frame.size.width];

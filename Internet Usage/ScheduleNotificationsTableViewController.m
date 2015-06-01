@@ -22,6 +22,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isNotificationOn"] isEqualToString:@"True"]) {
+        [self.notificationSwitch setOn:YES];
+        [self notificationSwitchChanged:self.notificationSwitch];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +34,7 @@
 }
 
 #pragma mark - Table view data source
-
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -42,7 +46,7 @@
     // Return the number of rows in the section.
     return 0;
 }
-
+*/
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
@@ -96,5 +100,65 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)notificationSwitchChanged:(UISwitch *)sender {
+    if(sender.isOn) {
+        [UIView transitionWithView:self.notificationView
+                          duration:1.0
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:NULL
+                        completion:NULL];
+        self.notificationView.hidden = NO;
+    }
+    else {
+        [UIView transitionWithView:self.notificationView
+                          duration:1.0
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:NULL
+                        completion:NULL];
+        self.notificationView.hidden = YES;
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+        [[NSUserDefaults standardUserDefaults] setObject:@"False" forKey:@"isNotificationOn"];
+    }
+}
+
+- (IBAction)saveButtonPressed:(UIButton *)sender {
+    // To get date from timePicker
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSDate *dateFromTimePicker = self.timePicker.date;
+    
+    NSDateComponents *dateComponents = [calendar components:( NSCalendarUnitYear| NSCalendarUnitMonth |  NSCalendarUnitDay ) fromDate:dateFromTimePicker];
+    NSDateComponents *timeComponents = [calendar components:( NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:dateFromTimePicker];
+    
+    NSDateComponents *dateComps = [[NSDateComponents alloc] init];
+    [dateComps setDay:[dateComponents day]];
+    [dateComps setMonth:[dateComponents month]];
+    [dateComps setYear:[dateComponents year]];
+    [dateComps setHour:[timeComponents hour]];
+    [dateComps setMinute:[timeComponents minute]];
+    [dateComps setSecond:0];
+    NSDate *itemDate = [calendar dateFromComponents:dateComps];
+    NSLog(@"itemDate: %@", itemDate);
+
+    NSString *notificationString = [NSString stringWithFormat:@"%ld:%ld", (long)timeComponents.hour, (long)timeComponents.minute];
+    NSLog(@"%@", notificationString);
+    
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    
+    localNotification.fireDate = itemDate;
+    localNotification.timeZone = [NSTimeZone localTimeZone];
+    localNotification.alertBody = @"Time to check your internet usage!";
+    localNotification.alertAction = @"View";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.applicationIconBadgeNumber = 1;
+    localNotification.repeatInterval = NSWeekCalendarUnit;
+    //localNotification.repeatInterval = NSCalendarUnitDay;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"True" forKey:@"isNotificationOn"];
+}
 
 @end

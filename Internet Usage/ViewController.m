@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "DSLData.h"
+#import "CustomerCareDetails.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    DSLData *dslData = [[DSLData alloc] init];
+    [dslData refreshData];
+    
+    CustomerCareDetails *customerCareDetails = [[CustomerCareDetails alloc] init];
+    NSLog(@"***States***\n%@", customerCareDetails.states);
+    NSLog(@"***Cities***\n%@", customerCareDetails.cities);
 }
 
 - (void)didReceiveMemoryWarning {

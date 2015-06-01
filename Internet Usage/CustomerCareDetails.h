@@ -10,4 +10,7 @@
 
 @interface CustomerCareDetails : NSObject
 
+@property (strong, nonatomic) NSArray *states;
+@property (strong, nonatomic) NSArray *cities;
+
 @end

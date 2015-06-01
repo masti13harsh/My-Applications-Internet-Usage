@@ -21,7 +21,11 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;    
+    self.dslData = [[DSLData alloc] init];
+    [self.dslData refreshData];
+    
+    [self connectingForData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +34,7 @@
 }
 
 #pragma mark - Table view data source
-
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -42,6 +46,7 @@
     // Return the number of rows in the section.
     return 0;
 }
+*/
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,5 +101,62 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)refreshButtonPressed:(UIBarButtonItem *)sender {
+    self.dslData = [[DSLData alloc] init];
+    [self.dslData refreshData];
+    [self connectingForData];
+}
+
+#pragma mark - Helper Methods
+
+- (void)updateUI {
+    self.dslIdLabel.text = self.dslData.dslId;
+    self.dataLimitLabel.text = [NSString stringWithFormat:@"%.2f GB", self.dslData.dataLimit];
+    self.availableBalanceLabel.text = [NSString stringWithFormat:@"%.2f GB", self.dslData.availableBalance];
+    self.daysLeftLabel.text = [NSString stringWithFormat:@"%d days", self.dslData.numberOfDays];
+    self.averageBalanceLabel.text = [NSString stringWithFormat:@"%.2f GB/day", self.dslData.averageBalance];
+    self.cycleDateLabel.text = self.dslData.nextBillingCycle;
+}
+
+- (void)receivedDataNotification:(id)sender {
+    //NSLog(@"receivedDataNotification called");
+    if(self.dslData.transactionStatus == 0) {
+        [self updateUI];
+    }
+    else if(self.dslData.transactionStatus == 2) {
+        [self updateUI];
+        [self showUIAlertWithMessage:self.dslData.transactionStatusString];
+    }
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"ReceivedData" object:nil];
+}
+
+- (void)connectionFailedNotification:(id)sender {
+    //NSLog(@"connectionFailedNotification called");
+    [self updateUI];
+    [self showUIAlertWithMessage:self.dslData.transactionStatusString];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"ConnectionFailed" object:nil];
+}
+
+- (void)connectingForData {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receivedDataNotification:) name:@"ReceivedData"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(connectionFailedNotification:)
+                                                 name:@"ConnectionFailed"
+                                               object:nil];
+    //NSLog(@"connectingForData called");
+}
+
+- (void)showUIAlertWithMessage:(NSString *)message {
+    //NSLog(@"showUIAlertWithMessage called");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something went wrong!😕😕"
+                                                    message:message
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 
 @end

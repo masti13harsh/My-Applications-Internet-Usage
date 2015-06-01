@@ -22,6 +22,7 @@
 }
 
 + (CGPoint)getCenterOfRect:(CGRect)rect {
+    NSLog(@"");
     return CGPointMake(rect.size.width/2, rect.size.height/2);
 }
 

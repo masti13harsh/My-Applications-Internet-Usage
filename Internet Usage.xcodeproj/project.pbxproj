@@ -9,11 +9,27 @@
 /* Begin PBXBuildFile section */
 		3A659B691AF7E9A30096903A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A659B681AF7E9A30096903A /* main.m */; };
 		3A659B6C1AF7E9A30096903A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A659B6B1AF7E9A30096903A /* AppDelegate.m */; };
-		3A659B6F1AF7E9A30096903A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A659B6E1AF7E9A30096903A /* ViewController.m */; };
 		3A659B721AF7E9A30096903A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A659B701AF7E9A30096903A /* Main.storyboard */; };
 		3A659B741AF7E9A30096903A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A659B731AF7E9A30096903A /* Images.xcassets */; };
 		3A659B771AF7E9A30096903A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A659B751AF7E9A30096903A /* LaunchScreen.xib */; };
 		3A659B831AF7E9A30096903A /* Internet_UsageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A659B821AF7E9A30096903A /* Internet_UsageTests.m */; };
+		3A659B8E1AF7E9DE0096903A /* DSLData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A659B8D1AF7E9DE0096903A /* DSLData.m */; };
+		3A659B911AF7F9120096903A /* CustomerCareDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A659B901AF7F9120096903A /* CustomerCareDetails.m */; };
+		3A85C6281B0898CB00B9C59B /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C61E1B0898CB00B9C59B /* MCNewCustomLayer.m */; };
+		3A85C6291B0898CB00B9C59B /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C6201B0898CB00B9C59B /* MCNewCustomLayeredView.m */; };
+		3A85C62A1B0898CB00B9C59B /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C6231B0898CB00B9C59B /* MCPercentageDoughnutView.m */; };
+		3A85C62B1B0898CB00B9C59B /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C6251B0898CB00B9C59B /* MCSliceLayer.m */; };
+		3A85C62C1B0898CB00B9C59B /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C6271B0898CB00B9C59B /* MCUtil.m */; };
+		3A85C6301B08A1A800B9C59B /* CurrentUsageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C62F1B08A1A800B9C59B /* CurrentUsageTableViewController.m */; };
+		3A8EEE511B11E84100C09824 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8EEE501B11E84100C09824 /* TabBarViewController.m */; };
+		3AC839E51B090D5600AA7F5D /* HelpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC839E41B090D5600AA7F5D /* HelpTableViewController.m */; };
+		3AF9ACFC1B1C3419001E35E0 /* notification icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF9ACFB1B1C3419001E35E0 /* notification icon.png */; };
+		3AF9AD001B1C34EB001E35E0 /* refresh icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF9ACFF1B1C34EB001E35E0 /* refresh icon.png */; };
+		3AF9AD021B1C3667001E35E0 /* detailed usage icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF9AD011B1C3667001E35E0 /* detailed usage icon.png */; };
+		3AF9AD041B1C37F7001E35E0 /* current usage icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF9AD031B1C37F7001E35E0 /* current usage icon.png */; };
+		3AF9AD061B1C3865001E35E0 /* help icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF9AD051B1C3865001E35E0 /* help icon.png */; };
+		3AFA8A4E1AFF7A3F00DFFDA3 /* DetailedUsageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA8A4D1AFF7A3F00DFFDA3 /* DetailedUsageTableViewController.m */; };
+		3AFA8A511AFF8B8C00DFFDA3 /* ScheduleNotificationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA8A501AFF8B8C00DFFDA3 /* ScheduleNotificationsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +48,43 @@
 		3A659B681AF7E9A30096903A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A659B6A1AF7E9A30096903A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A659B6B1AF7E9A30096903A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3A659B6D1AF7E9A30096903A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3A659B6E1AF7E9A30096903A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3A659B711AF7E9A30096903A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A659B731AF7E9A30096903A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A659B761AF7E9A30096903A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3A659B7C1AF7E9A30096903A /* Internet UsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Internet UsageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A659B811AF7E9A30096903A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A659B821AF7E9A30096903A /* Internet_UsageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Internet_UsageTests.m; sourceTree = "<group>"; };
+		3A659B8C1AF7E9DE0096903A /* DSLData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLData.h; sourceTree = "<group>"; };
+		3A659B8D1AF7E9DE0096903A /* DSLData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLData.m; sourceTree = "<group>"; };
+		3A659B8F1AF7F9120096903A /* CustomerCareDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerCareDetails.h; sourceTree = "<group>"; };
+		3A659B901AF7F9120096903A /* CustomerCareDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerCareDetails.m; sourceTree = "<group>"; };
+		3A85C61C1B0898CB00B9C59B /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
+		3A85C61D1B0898CB00B9C59B /* MCNewCustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayer.h; sourceTree = "<group>"; };
+		3A85C61E1B0898CB00B9C59B /* MCNewCustomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayer.m; sourceTree = "<group>"; };
+		3A85C61F1B0898CB00B9C59B /* MCNewCustomLayeredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayeredView.h; sourceTree = "<group>"; };
+		3A85C6201B0898CB00B9C59B /* MCNewCustomLayeredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayeredView.m; sourceTree = "<group>"; };
+		3A85C6211B0898CB00B9C59B /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h"; sourceTree = "<group>"; };
+		3A85C6221B0898CB00B9C59B /* MCPercentageDoughnutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPercentageDoughnutView.h; sourceTree = "<group>"; };
+		3A85C6231B0898CB00B9C59B /* MCPercentageDoughnutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPercentageDoughnutView.m; sourceTree = "<group>"; };
+		3A85C6241B0898CB00B9C59B /* MCSliceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSliceLayer.h; sourceTree = "<group>"; };
+		3A85C6251B0898CB00B9C59B /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
+		3A85C6261B0898CB00B9C59B /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
+		3A85C6271B0898CB00B9C59B /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
+		3A85C62E1B08A1A800B9C59B /* CurrentUsageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUsageTableViewController.h; sourceTree = "<group>"; };
+		3A85C62F1B08A1A800B9C59B /* CurrentUsageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentUsageTableViewController.m; sourceTree = "<group>"; };
+		3A8EEE4F1B11E84100C09824 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		3A8EEE501B11E84100C09824 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		3AC839E31B090D5600AA7F5D /* HelpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpTableViewController.h; sourceTree = "<group>"; };
+		3AC839E41B090D5600AA7F5D /* HelpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpTableViewController.m; sourceTree = "<group>"; };
+		3AF9ACFB1B1C3419001E35E0 /* notification icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notification icon.png"; sourceTree = "<group>"; };
+		3AF9ACFF1B1C34EB001E35E0 /* refresh icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh icon.png"; sourceTree = "<group>"; };
+		3AF9AD011B1C3667001E35E0 /* detailed usage icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detailed usage icon.png"; sourceTree = "<group>"; };
+		3AF9AD031B1C37F7001E35E0 /* current usage icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "current usage icon.png"; sourceTree = "<group>"; };
+		3AF9AD051B1C3865001E35E0 /* help icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help icon.png"; sourceTree = "<group>"; };
+		3AFA8A4C1AFF7A3F00DFFDA3 /* DetailedUsageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedUsageTableViewController.h; sourceTree = "<group>"; };
+		3AFA8A4D1AFF7A3F00DFFDA3 /* DetailedUsageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedUsageTableViewController.m; sourceTree = "<group>"; };
+		3AFA8A4F1AFF8B8C00DFFDA3 /* ScheduleNotificationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleNotificationsTableViewController.h; sourceTree = "<group>"; };
+		3AFA8A501AFF8B8C00DFFDA3 /* ScheduleNotificationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleNotificationsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +126,30 @@
 		3A659B651AF7E9A30096903A /* Internet Usage */ = {
 			isa = PBXGroup;
 			children = (
+				3A85C62D1B0898D300B9C59B /* Circular Progeress Bar */,
 				3A659B6A1AF7E9A30096903A /* AppDelegate.h */,
 				3A659B6B1AF7E9A30096903A /* AppDelegate.m */,
-				3A659B6D1AF7E9A30096903A /* ViewController.h */,
-				3A659B6E1AF7E9A30096903A /* ViewController.m */,
 				3A659B701AF7E9A30096903A /* Main.storyboard */,
+				3A8EEE4F1B11E84100C09824 /* TabBarViewController.h */,
+				3A8EEE501B11E84100C09824 /* TabBarViewController.m */,
+				3AC839E31B090D5600AA7F5D /* HelpTableViewController.h */,
+				3AC839E41B090D5600AA7F5D /* HelpTableViewController.m */,
+				3A85C62E1B08A1A800B9C59B /* CurrentUsageTableViewController.h */,
+				3A85C62F1B08A1A800B9C59B /* CurrentUsageTableViewController.m */,
+				3AFA8A4F1AFF8B8C00DFFDA3 /* ScheduleNotificationsTableViewController.h */,
+				3AFA8A501AFF8B8C00DFFDA3 /* ScheduleNotificationsTableViewController.m */,
+				3AFA8A4C1AFF7A3F00DFFDA3 /* DetailedUsageTableViewController.h */,
+				3AFA8A4D1AFF7A3F00DFFDA3 /* DetailedUsageTableViewController.m */,
+				3A659B8C1AF7E9DE0096903A /* DSLData.h */,
+				3A659B8D1AF7E9DE0096903A /* DSLData.m */,
+				3A659B8F1AF7F9120096903A /* CustomerCareDetails.h */,
+				3A659B901AF7F9120096903A /* CustomerCareDetails.m */,
 				3A659B731AF7E9A30096903A /* Images.xcassets */,
+				3AF9ACFB1B1C3419001E35E0 /* notification icon.png */,
+				3AF9ACFF1B1C34EB001E35E0 /* refresh icon.png */,
+				3AF9AD011B1C3667001E35E0 /* detailed usage icon.png */,
+				3AF9AD031B1C37F7001E35E0 /* current usage icon.png */,
+				3AF9AD051B1C3865001E35E0 /* help icon.png */,
 				3A659B751AF7E9A30096903A /* LaunchScreen.xib */,
 				3A659B661AF7E9A30096903A /* Supporting Files */,
 			);
@@ -117,6 +180,25 @@
 				3A659B811AF7E9A30096903A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A85C62D1B0898D300B9C59B /* Circular Progeress Bar */ = {
+			isa = PBXGroup;
+			children = (
+				3A85C61C1B0898CB00B9C59B /* MCCore.h */,
+				3A85C61D1B0898CB00B9C59B /* MCNewCustomLayer.h */,
+				3A85C61E1B0898CB00B9C59B /* MCNewCustomLayer.m */,
+				3A85C61F1B0898CB00B9C59B /* MCNewCustomLayeredView.h */,
+				3A85C6201B0898CB00B9C59B /* MCNewCustomLayeredView.m */,
+				3A85C6211B0898CB00B9C59B /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */,
+				3A85C6221B0898CB00B9C59B /* MCPercentageDoughnutView.h */,
+				3A85C6231B0898CB00B9C59B /* MCPercentageDoughnutView.m */,
+				3A85C6241B0898CB00B9C59B /* MCSliceLayer.h */,
+				3A85C6251B0898CB00B9C59B /* MCSliceLayer.m */,
+				3A85C6261B0898CB00B9C59B /* MCUtil.h */,
+				3A85C6271B0898CB00B9C59B /* MCUtil.m */,
+			);
+			name = "Circular Progeress Bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +250,7 @@
 				TargetAttributes = {
 					3A659B621AF7E9A30096903A = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = S25HRCPNQ9;
 					};
 					3A659B7B1AF7E9A30096903A = {
 						CreatedOnToolsVersion = 6.3;
@@ -201,6 +284,11 @@
 			files = (
 				3A659B721AF7E9A30096903A /* Main.storyboard in Resources */,
 				3A659B771AF7E9A30096903A /* LaunchScreen.xib in Resources */,
+				3AF9AD061B1C3865001E35E0 /* help icon.png in Resources */,
+				3AF9AD001B1C34EB001E35E0 /* refresh icon.png in Resources */,
+				3AF9AD041B1C37F7001E35E0 /* current usage icon.png in Resources */,
+				3AF9ACFC1B1C3419001E35E0 /* notification icon.png in Resources */,
+				3AF9AD021B1C3667001E35E0 /* detailed usage icon.png in Resources */,
 				3A659B741AF7E9A30096903A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +307,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A659B6F1AF7E9A30096903A /* ViewController.m in Sources */,
+				3A659B8E1AF7E9DE0096903A /* DSLData.m in Sources */,
+				3A85C6301B08A1A800B9C59B /* CurrentUsageTableViewController.m in Sources */,
+				3A8EEE511B11E84100C09824 /* TabBarViewController.m in Sources */,
+				3A85C6291B0898CB00B9C59B /* MCNewCustomLayeredView.m in Sources */,
+				3A85C62B1B0898CB00B9C59B /* MCSliceLayer.m in Sources */,
+				3AFA8A4E1AFF7A3F00DFFDA3 /* DetailedUsageTableViewController.m in Sources */,
+				3A85C62C1B0898CB00B9C59B /* MCUtil.m in Sources */,
+				3A659B911AF7F9120096903A /* CustomerCareDetails.m in Sources */,
+				3AFA8A511AFF8B8C00DFFDA3 /* ScheduleNotificationsTableViewController.m in Sources */,
+				3AC839E51B090D5600AA7F5D /* HelpTableViewController.m in Sources */,
 				3A659B6C1AF7E9A30096903A /* AppDelegate.m in Sources */,
 				3A659B691AF7E9A30096903A /* main.m in Sources */,
+				3A85C6281B0898CB00B9C59B /* MCNewCustomLayer.m in Sources */,
+				3A85C62A1B0898CB00B9C59B /* MCPercentageDoughnutView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +446,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Internet Usage/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,9 +460,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Internet Usage/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,6 +523,7 @@
 				3A659B881AF7E9A30096903A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A659B891AF7E9A30096903A /* Build configuration list for PBXNativeTarget "Internet UsageTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +532,7 @@
 				3A659B8B1AF7E9A30096903A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
