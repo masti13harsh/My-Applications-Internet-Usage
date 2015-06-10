@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *daysLeftLabel;
 @property (strong, nonatomic) IBOutlet UITextField *stateTextField;
 @property (strong, nonatomic) IBOutlet UITextField *cityTextField;
+@property (strong, nonatomic) IBOutlet UIButton *callButton;
 
 // IBActions
 - (IBAction)callButtonPressed:(UIButton *)sender;

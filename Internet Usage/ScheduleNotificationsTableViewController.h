@@ -19,5 +19,6 @@
 @property (strong, nonatomic) IBOutlet UIView *notificationView;
 @property (strong, nonatomic) IBOutlet UIDatePicker *timePicker;
 @property (strong, nonatomic) IBOutlet UISwitch *notificationSwitch;
+@property (strong, nonatomic) IBOutlet UIButton *saveButton;
 
 @end

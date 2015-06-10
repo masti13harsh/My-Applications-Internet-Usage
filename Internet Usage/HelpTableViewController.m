@@ -37,6 +37,10 @@
     
     self.selectedState = @"Select State";
     self.selectedCity = @"Select City";
+    
+    self.callButton.layer.cornerRadius = 2;
+    self.callButton.layer.borderWidth = 2;
+    self.callButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {

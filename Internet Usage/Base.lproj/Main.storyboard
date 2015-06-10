@@ -365,6 +365,7 @@
                                         <segment title="Daily"/>
                                         <segment title="Weekly"/>
                                     </segments>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </segmentedControl>
                                 <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7is-rC-fWc">
                                     <rect key="frame" x="0.0" y="64" width="320" height="162"/>
@@ -375,8 +376,9 @@
                                     <locale key="locale" localeIdentifier="en_IN"/>
                                 </datePicker>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-N1-iMb">
-                                    <rect key="frame" x="143" y="234" width="34" height="30"/>
+                                    <rect key="frame" x="8" y="234" width="304" height="43"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                     <state key="normal" title="Save">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -390,6 +392,8 @@
                                 <constraint firstAttribute="centerX" secondItem="7is-rC-fWc" secondAttribute="centerX" id="CDa-Tf-xOI"/>
                                 <constraint firstItem="DQJ-N1-iMb" firstAttribute="top" secondItem="7is-rC-fWc" secondAttribute="bottom" constant="8" id="D1P-dQ-keg"/>
                                 <constraint firstAttribute="centerX" secondItem="dPO-2P-S9A" secondAttribute="centerX" id="D6N-oe-gw2"/>
+                                <constraint firstItem="DQJ-N1-iMb" firstAttribute="leading" secondItem="vke-l4-OSf" secondAttribute="leadingMargin" id="X6w-tJ-2iB"/>
+                                <constraint firstItem="DQJ-N1-iMb" firstAttribute="trailing" secondItem="vke-l4-OSf" secondAttribute="trailingMargin" id="XWu-Zp-e1e"/>
                                 <constraint firstItem="7is-rC-fWc" firstAttribute="top" secondItem="dPO-2P-S9A" secondAttribute="bottom" constant="18" id="pt8-5k-5xo"/>
                                 <constraint firstAttribute="centerX" secondItem="DQJ-N1-iMb" secondAttribute="centerX" id="yIg-67-uv2"/>
                             </constraints>
@@ -434,6 +438,7 @@
                         <outlet property="dailyOrWeeklySegment" destination="dPO-2P-S9A" id="wfv-Nt-cWq"/>
                         <outlet property="notificationSwitch" destination="1e8-tf-bxv" id="55s-Jb-vdM"/>
                         <outlet property="notificationView" destination="vke-l4-OSf" id="6cn-au-AYZ"/>
+                        <outlet property="saveButton" destination="DQJ-N1-iMb" id="L7p-LU-2o3"/>
                         <outlet property="timePicker" destination="7is-rC-fWc" id="Yho-WY-WHe"/>
                     </connections>
                 </tableViewController>
@@ -495,10 +500,11 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89b-4s-bZw">
                                     <rect key="frame" x="8" y="69" width="304" height="43"/>
-                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="43" id="u1k-Ao-J8G"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                     <state key="normal" title="Call">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -642,6 +648,7 @@
                     <navigationItem key="navigationItem" title="HELP" id="zEl-o8-tFN"/>
                     <connections>
                         <outlet property="availableBalanceLabel" destination="C2e-bq-GEX" id="8Jn-R4-GYq"/>
+                        <outlet property="callButton" destination="89b-4s-bZw" id="LQb-ct-WHM"/>
                         <outlet property="cityTextField" destination="QZw-b8-PmT" id="DtP-hD-lHT"/>
                         <outlet property="daysLeftLabel" destination="ymw-Bt-l2v" id="gik-gl-qMd"/>
                         <outlet property="dslIdLabel" destination="W2c-NY-Lq4" id="Ckz-zX-cIo"/>

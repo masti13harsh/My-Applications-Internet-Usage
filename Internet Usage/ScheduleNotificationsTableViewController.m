@@ -26,6 +26,10 @@
         [self.notificationSwitch setOn:YES];
         [self notificationSwitchChanged:self.notificationSwitch];
     }
+ 
+    self.saveButton.layer.cornerRadius = 2;
+    self.saveButton.layer.borderWidth = 2;
+    self.saveButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {

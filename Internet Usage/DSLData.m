@@ -61,6 +61,10 @@
     self.transactionStatus = 1;
     self.transactionStatusString = [NSString stringWithFormat:@"Connection Failed! \nPlease make sure you are connected to airtel broadband network!"];
     
+    
+    // Testing purposes... Remove in prod
+    [self testingSetAllTheProperties];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ConnectionFailed" object:nil];
     //NSLog(@"Connection failed in DSLData");
 }
@@ -75,9 +79,22 @@
         isRequestCompleted = FALSE;
         self.transactionStatus = 2;
         self.transactionStatusString = [NSString stringWithFormat:@"Your request cannot be completed. Please try after some time!"];
+        
+        // Testing purposes... Remove in prod
+        [self testingSetAllTheProperties];
     }
     
     return isRequestCompleted;
+}
+
+- (void)testingSetAllTheProperties {
+    self.dslId = [NSString stringWithFormat:@"01141003552_d"];
+    self.dataLimit = 125.00;
+    self.availableBalance = 54.00;
+    self.numberOfDays = 12;
+    self.averageBalance = self.availableBalance / (self.numberOfDays + 1);
+    self.percentageOfDataConsumed = ((self.dataLimit - self.availableBalance) / self.dataLimit) * 100;
+    self.nextBillingCycle = [NSString stringWithFormat:@"15-JAN"];
 }
 
 - (void)setAllTheProperties {
