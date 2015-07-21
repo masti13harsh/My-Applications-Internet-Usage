@@ -63,7 +63,7 @@
     
     
     // Testing purposes... Remove in prod
-    [self testingSetAllTheProperties];
+    //[self testingSetAllTheProperties];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ConnectionFailed" object:nil];
     //NSLog(@"Connection failed in DSLData");
@@ -81,7 +81,7 @@
         self.transactionStatusString = [NSString stringWithFormat:@"Your request cannot be completed. Please try after some time!"];
         
         // Testing purposes... Remove in prod
-        [self testingSetAllTheProperties];
+        //[self testingSetAllTheProperties];
     }
     
     return isRequestCompleted;
@@ -99,23 +99,23 @@
 
 - (void)setAllTheProperties {
     // DSL ID
-    NSString *dslIdSpan = [DSLData scanString:self.responseString startTag:@"<div class=\"box-data-text\">DSL number: <br />" endTag:@"/div>"];
+    NSString *dslIdSpan = [DSLData scanString:self.responseString startTag:@"<p>DSL number:" endTag:@"/p>"];
     self.dslId = [DSLData scanString:dslIdSpan startTag:@"<span>" endTag:@"</span>"];
     //NSLog(@"DSL ID: %@", self.dslId);
     
     // Data Limit
-    NSString *dataLimitSpan = [DSLData scanString:self.responseString startTag:@"<div class=\"box-data-text\">High speed data limit:<br />" endTag:@"</div>"];
-    self.dataLimit = [[DSLData scanString:dataLimitSpan startTag:@"<span>" endTag:@"GB"] floatValue];
+    NSString *dataLimitSpan = [DSLData scanString:self.responseString startTag:@"<p>Your monthly high-speed" endTag:@"</p>"];
+    self.dataLimit = [[DSLData scanString:dataLimitSpan startTag:@"Plan Quota :<span>" endTag:@"GB"] floatValue];
     //NSLog(@"Data Limit: %f GB", self.dataLimit);
     
     // Available Balance
-    NSString *availableBalanceSpan = [DSLData scanString:self.responseString startTag:@"<div class=\"box-data-text-first\">Available balance<br />" endTag:@"</span>"];
+    NSString *availableBalanceSpan = [DSLData scanString:self.responseString startTag:@"<p>You are left" endTag:@"</p>"];
     self.availableBalance = [[DSLData scanString:availableBalanceSpan startTag:@"<span>" endTag:@" GB"] floatValue];
     //NSLog(@"Available Balance: %f GB", self.availableBalance);
     
     // Number of Days
-    NSString *numberOfDaysSpan = [DSLData scanString:self.responseString startTag:@"<div class=\"box-data-text\">No. of days left in the current bill cycle:<br />" endTag:@"</div>"];
-    self.numberOfDays = [[DSLData scanString:numberOfDaysSpan startTag:@"<span>" endTag:@" days</span>"] intValue];
+    NSString *numberOfDaysSpan = [DSLData scanString:self.responseString startTag:@"<p>No. of days left in the current bill cycle:" endTag:@"</p>"];
+    self.numberOfDays = [[DSLData scanString:numberOfDaysSpan startTag:@"<span>" endTag:@" day(s)</span>"] intValue];
     //NSLog(@"Number of Days: %d days", self.numberOfDays);
     
     // Average Balance
