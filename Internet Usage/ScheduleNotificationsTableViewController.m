@@ -157,8 +157,12 @@
     localNotification.alertAction = @"View";
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     localNotification.applicationIconBadgeNumber = 1;
-    localNotification.repeatInterval = NSWeekCalendarUnit;
-    //localNotification.repeatInterval = NSCalendarUnitDay;
+    if(self.dailyOrWeeklySegment == 0) {
+        localNotification.repeatInterval = NSCalendarUnitDay;
+    }
+    else {
+        localNotification.repeatInterval = NSWeekCalendarUnit;
+    }
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
