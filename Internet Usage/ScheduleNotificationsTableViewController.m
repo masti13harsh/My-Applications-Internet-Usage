@@ -157,7 +157,7 @@
     localNotification.alertAction = @"View";
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     localNotification.applicationIconBadgeNumber = 1;
-    if(self.dailyOrWeeklySegment == 0) {
+    if(self.dailyOrWeeklySegment.selectedSegmentIndex == 0) {
         localNotification.repeatInterval = NSCalendarUnitDay;
     }
     else {
@@ -166,7 +166,35 @@
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
+    [self alertForNotification:localNotification];
+    
     [[NSUserDefaults standardUserDefaults] setObject:@"True" forKey:@"isNotificationOn"];
 }
 
+
+// Helper Methods
+- (void)alertForNotification:(UILocalNotification *)notification {
+    NSMutableString *message = [[NSMutableString alloc] init];
+    [message appendString:@"You will be notified "];
+    
+    if(notification.repeatInterval == NSCalendarUnitDay) {
+        [message appendString:@"daily "];
+    }
+    else {
+        [message appendString:@"weekly "];
+    }
+
+    NSDate *date = notification.fireDate;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    
+    [message appendString:[NSString stringWithFormat:@"at %@.", [formatter stringFromDate:date]]];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notification"
+                                                    message:message
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 @end
